@@ -1,0 +1,24 @@
+{
+  "background_color": "#BDFFBF",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "memopaws",
+  "orientation": "any",
+  "scope": "/https://memopaws.netlify.app/",
+  "short_name": "memopaws",
+  "start_url": "https://memopaws.netlify.app/",
+  "theme_color": "#BDFFBF",
+  "icons": [
+    {
+      "src": "512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "categories": [
+    "games"
+  ],
+  "id": "mpaws",
+  "description": "Un juego de memoria con lindos diseños de perritos!",
+  "lang": "es"
+}

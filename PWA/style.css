@@ -1,0 +1,324 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Readex Pro', "Baloo Da 2", sans-serif; 
+    background: rgb(189, 255, 191, 0.5);
+    color: #2A0E2C;
+    scroll-behavior: smooth;
+    min-height: 100vh;
+}
+
+.bg-custom{
+    background-color: #2A0E2C;
+}
+
+.navbar-brand{
+    font-size: 52px;
+    color: #F791C5;
+}
+
+.navbar-brand:hover{
+    color: #BDFFBF;
+}
+
+.img_logo{
+    height: 80px;
+    width: 80px;
+}
+.balanceo {
+    transition: transform 0.2s ease;
+}
+
+.balanceo:hover {
+    animation: balanceo 1s infinite alternate;
+}
+
+@keyframes balanceo {
+    0% {
+        transform: rotate(-15deg);
+    }
+    100% {
+        transform: rotate(15deg);
+    }
+}
+
+main {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.nav-pills{
+    background-color: rgb(247, 145, 197, 0.6);
+}
+
+.nav-pills>a{
+    color: #2A0E2C;
+    font-size: 18px;
+}
+
+.nav-pills>a:hover{
+    color: #2A0E2C;
+    font-size: 19px;
+}
+
+.nav.nav-pills .nav-link.active{
+    background-color: #2A0E2C;
+    color: #F791C5;
+}
+
+.nav-link{
+    color: #F791C5;
+    margin-right: 2rem;
+}
+
+.nav-link:hover{
+    color: #BDFFBF;
+}
+
+figure,
+figure img {
+    display: inline-block;
+    width: 100%;
+}
+
+figure {
+    position: relative;
+    transition: all ease .5s;
+    transform-style: preserve-3d;
+    transform: perspective(600px) rotateY(0deg);
+    cursor: pointer;
+    box-shadow: 3px 3px 16px rgb(0, 0, 0, 0.6);
+}
+
+figure::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0);
+    transition: 0.3s all ease;
+}
+
+figure:hover:after {
+    background: rgb(42, 14, 44, 0.4);
+}
+
+figure.opened {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+figure .back {
+    display: block;
+    backface-visibility: hidden;
+}
+
+figure .searched-image {
+    position: absolute;
+    top: 0;
+    transform: perspective(600px) rotateY(180deg);
+    backface-visibility: hidden;
+    height: 100%;
+    overflow: hidden;
+}
+
+.modal-body>figcaption{
+    text-align: left;
+}
+
+.btn{
+    background-color:#2A0E2C;
+    border-color: #2A0E2C;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    color: #F791C5;
+    font-weight: bolder;
+    font-size: 16px;
+    font-family: "Baloo Da 2";
+}
+
+.btn:hover{
+    background-color:#F791C5;
+    border-color: #F791C5;
+    color: #2A0E2C;
+    font-weight: bolder;
+}
+
+.btn.btn-primary:active{
+    background-color:#F791C5;
+    border-color: #F791C5;
+    color: #2A0E2C;
+    font-weight: bolder;
+}
+
+.texto_pastilla{
+    background-color: rgb(247, 145, 197, 0.3);
+    height: 9rem;
+    color: #2A0E2C;
+    font-size: 16px;
+    text-align: center;
+}
+
+
+.pastilla:hover {
+    transform: scale(1.1); 
+    transition: transform 0.3s ease;
+}
+
+
+.titulos{
+    font-size: 42px;
+    text-align: center;
+    font-weight: bold;
+    color: 0 0 10px #52002D; 
+    animation: glow_2 2s infinite alternate;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+
+@keyframes glow_2 {
+    0% {
+        color: #52002D;
+    }
+    100% {
+        color: #F791C5; 
+    }
+}
+
+.accordion{
+    margin-bottom: 2rem;
+}
+
+.accordion-body{
+    background-color: #BDFFBF;
+}
+
+.accordion-button {
+    color: #52002D;
+}
+
+
+.accordion-button:not(.collapsed)::after {
+    color: #52002D;
+}
+.accordion-button.collapsed {
+    background-color: #F791C5; 
+}
+
+.accordion-collapse.collapse.show{
+    background-color: #BDFFBF;
+    color: #2A0E2C;
+}
+
+.accordion-item h2.accordion-header button.accordion-button:not(.collapsed) {
+    background-color: #52002D;
+    color: #BDFFBF;
+}
+
+.accordion-item h2.accordion-header button.accordion-button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.rest_boton{
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+.modal-content.bg_modal{
+    background-color: #BDFFBF;
+}
+
+.p_info{
+    margin: 3rem;
+    font-size: 20px;
+}
+
+.button_info{
+    margin-bottom: 8rem;
+}
+
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background-color: #2A0E2C;
+    color: #BDFFBF;
+    text-align: center;
+    vertical-align:bottom;
+}
+
+
+footer.custom-foot {
+    margin: 0;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2A0E2C;
+    color: #BDFFBF;
+    text-align: center;
+
+}
+
+.social-icons {
+    padding: 0;
+    list-style-type: none;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    background-color: #F791C5; 
+    color: #2A0E2C;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #BDFFBF; 
+}
+
+@media (max-width: 768px){
+    footer{
+        height: 110px;
+        width: 100%;
+        padding: 5px;
+    }
+    figure::after {
+        background:none;
+    }
+    
+    figure:hover:after {
+        background:none;
+    }
+}
+
+@media (max-width: 425px){
+    .navbar-brand{
+        font-size: 32px;
+    }
+}
